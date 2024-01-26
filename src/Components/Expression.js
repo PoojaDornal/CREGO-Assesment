@@ -14,7 +14,7 @@ const ExpressionFrom = () =>
     };
 
     const [values, setValues] = useState([initialValue]);
-    const [conector, setConector] = useState("and");
+    const [combinator, setCombinator] = useState("and");
     const [data, setData] = useState(false);
 
     const handleAddExpression = () => {
@@ -55,8 +55,8 @@ const ExpressionFrom = () =>
         setValues(updatedValues);
     };
 
-    const handleConnectorChange = (value) =>{
-        setConector(value);
+    const handleCombinatorChange = (value) =>{
+        setCombinator(value);
     };
 
     const handleSubmit = () =>{
@@ -70,7 +70,7 @@ const ExpressionFrom = () =>
 
         const output = {
             values: filteredValues,
-            conector: conector || 'and',
+            combinator: combinator || 'and',
         };
         console.log(output);
         setData(true);
@@ -140,11 +140,11 @@ const ExpressionFrom = () =>
             ))}
             <Row className="mt-4 d-flex">
             <Col xs={12} sm={12} md={12} lg={8}>
-            <Form.Group controlId="conector">
-              <Form.Label className="fw-bold">Conector</Form.Label>
+            <Form.Group controlId="combinator">
+              <Form.Label className="fw-bold">combinator</Form.Label>
               <Form.Select className="w-100 mb-3"
-                value={conector}
-                onChange={(e) => handleConnectorChange(e.target.value)}>
+                value={combinator}
+                onChange={(e) => handleCombinatorChange(e.target.value)}>
                  <option value="and">AND</option>  
                  <option value="or">OR</option> 
               </Form.Select>
@@ -167,7 +167,7 @@ const ExpressionFrom = () =>
             <div className="mt-4 mb-4">
                 <h2 className="text-center">Output</h2>
                 <div className="bg-light text-dark p-3 rounded shadow">
-                    <pre>{JSON.stringify({values, conector}, null,2)}</pre>
+                    <pre>{JSON.stringify({values, combinator}, null,2)}</pre>
                 </div>
             </div>
         )}
