@@ -19,15 +19,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 3. User should be able to add and delete expressions.
 
 ### Tools and Libraries
-    - react
-    - react-dom
-    - react-bootstrap
-    - bootstrap
+    - React
+    - Bootstrap
     - Javascript
 
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 
